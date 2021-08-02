@@ -1,0 +1,21 @@
+nav ul li {
+
+    border-bottom-right-radius:1px solid rgb(255, 255, 255);
+    display:inline-block;
+    float:inline-end;
+    margin-top:4px;
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background: #49cfff;
+    text-align: center;
+    
+}
+
+header{
+    color: rgb(145, 145, 255);
+}
+
+footer{
+    color: rgb(145, 145, 255);
+}
