@@ -1,3 +1,6 @@
+'use strict'
+let counter = 0 ;
+
 let name = prompt("What is your name?");
 alert ("Hello "+ name);
 console.log(name);
@@ -8,6 +11,7 @@ console.log(q1);
 if (q1 === 'yes' || q1 === 'y' ){
 /*console.log("True, My fav food is mansaf")*/
 alert("True, My fav food is mansaf");
+counter++;
 }
 if (q1 === 'no' || q1 === 'n' ){
 alert("False, My fav food is mansaf");
@@ -19,6 +23,7 @@ console.log(q2);
 if (q2 === 'yes' || q2 === 'y' ){
     /*console.log("True, my fav sport is basketball")*/
     alert("True, my fav sport is basketball ");
+    counter++;
     }
     if (q2 === 'no' || q2 === 'n' ){
     alert("False, my fav sport is basketball ");
@@ -34,6 +39,7 @@ if (q3 === 'yes' || q3 === 'y' ){
     if (q3 === 'no' || q3 === 'n' ){
     /*console.log(True, I don't play biano");*/
     alert("True, I don't play biano");
+    counter++;
     }
     
 
@@ -46,6 +52,7 @@ if (q4 === 'yes' || q4 === 'y' ){
     if (q4 === 'no' || q4 === 'n' ){
     /*console.log("True, I like dogs");*/
     alert("True, I like dogs");
+    counter++;
     }
   
 let q5 = prompt("Do you think I like summer ? Answer by Yes / No / Y / N");
@@ -54,9 +61,71 @@ console.log(q5);
 if (q5 === 'yes' || q5 === 'y' ){
     /*console.log("True, I like summer");*/
     alert("True, I like summer");
+    counter++;
     }
     if (q5 === 'no' || q5 === 'n' ){
     alert("False, I like summer");
     }
    
     
+let q6 =prompt("Guess the number between 1 - 10 (You have just 4 chances)");
+/*console.log(the number is 4");*/
+let num = 4 ;
+
+for(let count = 0 ; count < 4; count++ ){
+
+ if(q6 > num){
+
+    alert("Too high ( Try Again )");
+    q6 =prompt("Guess the number between 1 - 10 (You have 4 chances)");
+ }
+
+ 
+ else if(q6 < num){
+    
+    alert("Too low ( Try Again )");
+    q6 =prompt("Guess the number between 1 - 10 (You have 4 chances)");
+ }
+
+ else if(q6 == num){
+    
+    alert("Your Answer is correct !")
+    counter++;
+    break;
+
+ }
+ }
+
+  alert ("The Answer is 4 ");
+
+  
+  let q7 = prompt ("Guess three of my fav food between Mansaf / Salmon / Chicken wings / Steak / Grilled vegetables (You Have 6 chances)");
+  
+  if (q7 === 'Mansaf Salmon Steak' || q7 === 'Salmon Steak Mansaf' || q7 === 'Steak Salmon Mansaf'  
+     || q7 === 'Mansaf Steak Salmon' || q7 === 'Salmon Mansaf Steak' || q7 === 'Steak Mansaf Salmon') 
+      
+      {
+          /*console.log("Mansaf Steak Salmon");*/
+          alert("The Answer is correct!");
+          counter++;
+      }
+
+    else {
+
+     for (let c = 0 ; c < 6 ; c++){
+     alert ("The Answer is wrong (Try Again)");
+     q7 = prompt ("Guess three of my fav food between Mansaf / Salmon / Chicken wings / Steak / Grilled vegetables (You Have 6 chances)");
+
+     if (q7 === 'Mansaf Salmon Steak' || q7 === 'Salmon Steak Mansaf' || q7 === 'Steak Salmon Mansaf'  
+      || q7 === 'Mansaf Steak Salmon' || q7 === 'Salmon Mansaf Steak' || q7 === 'Steak Mansaf Salmon' ){
+          alert("The Answer is correct!");
+          counter++;
+          break;
+    }
+  
+}
+    alert("The Answer is Mansaf and Salmon and Steak");
+
+    }
+    
+    alert("The total of correct answers " + counter);

@@ -19,3 +19,16 @@ header{
 footer{
     color: rgb(145, 145, 255);
 }
+
+Body {
+    padding: 30px;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul {
+    list-style-type: circle;
+    
+}
